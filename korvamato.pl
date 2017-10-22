@@ -30,7 +30,7 @@ sub korvamato {
 			my $output = "";
 
 			if($size > 2) {
-				if(/http.*yout*/i) {
+				if(/https?:\/\/(www\.)?youtu(\.be\/|be\.com\/watch\?v=).{11}/i) {
 					`echo "$in[2]" >> $file`;
 					$server->command("msg $chatnet $target: korvamato lisätty!");
 				}
